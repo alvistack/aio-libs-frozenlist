@@ -1,0 +1,5 @@
+python-frozenlist source: file-without-copyright-information
+python-frozenlist source: no-debian-changes
+python-frozenlist source: source-contains-prebuilt-windows-binary
+python-frozenlist source: source-is-missing
+python-frozenlist source: source-package-encodes-python-version
