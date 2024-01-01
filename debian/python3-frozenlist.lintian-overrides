@@ -1,0 +1,7 @@
+python3-frozenlist: arch-independent-package-contains-binary-or-object
+python3-frozenlist: copyright-without-copyright-notice
+python3-frozenlist: initial-upload-closes-no-bugs
+python3-frozenlist: missing-dependency-on-libc
+python3-frozenlist: no-manual-page
+python3-frozenlist: unstripped-binary-or-object
+python3-frozenlist: zero-byte-file-in-doc-directory
