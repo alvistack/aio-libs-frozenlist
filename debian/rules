@@ -1,0 +1,32 @@
+#!/usr/bin/make -f
+
+SHELL := /bin/bash
+
+override_dh_auto_build:
+	python3 -m cython -3 frozenlist/*.pyx -I frozenlist
+	pip wheel \
+		--no-deps \
+		--no-build-isolation \
+		--wheel-dir=dist \
+		--config-settings=pure-python=false \
+		.
+
+override_dh_auto_install:
+	pip install \
+		--no-deps \
+		--ignore-installed \
+		--root=debian/tmp \
+		--prefix=/usr \
+		--config-settings=pure-python=false \
+		dist/*.whl
+	mv debian/tmp/usr/local/* debian/tmp/usr/ || echo $$?
+	rm -rf debian/tmp/usr/local || echo $$?
+	find debian/tmp/usr/lib/python*/*-packages -type f -name '*.pyc' -exec rm -rf {} \;
+	fdupes -qnrps debian/tmp/usr/lib/python*/*-packages
+
+override_dh_auto_test:
+
+override_dh_auto_clean:
+
+%:
+	dh $@ --with python3

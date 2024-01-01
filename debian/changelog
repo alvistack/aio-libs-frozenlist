@@ -1,0 +1,5 @@
+python-frozenlist (100:1.7.0-1) UNRELEASED; urgency=medium
+
+  * https://github.com/aio-libs/frozenlist/releases/tag/v1.7.0
+
+ -- Wong Hoi Sing Edison <hswong3i@pantarei-design.com>  Tue, 10 Jun 2025 16:26:53 +0800
