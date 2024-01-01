@@ -50,3 +50,5 @@ virtualenv.py
 .vscode
 .mypy_cache
 pip-wheel-metadata
+
+.pybuild/
